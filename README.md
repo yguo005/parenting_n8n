@@ -129,7 +129,7 @@ graph TD
 - **Empathetic**: Supportive, non-judgmental tone
 - **Professional**: Clinical psychology expertise embedded
 
-## 🔒 Reliability Features
+##  Reliability Features
 
 ### Data Integrity
 - JsProxy object handling for n8n compatibility
