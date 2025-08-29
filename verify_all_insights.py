@@ -18,7 +18,7 @@ def convert_jsproxy(obj):
     else:
         return obj
 
-# REAL dimensions from your actual all_data.json
+# REAL dimensions from actual all_data.json
 real_dimensions = [
     'Abstract Conceptualization', 'Acceptance', 'Active Experimentation', 
     'Analysis', 'Analyticity', 'Anger Management', 'Approach-Avoidance Style',

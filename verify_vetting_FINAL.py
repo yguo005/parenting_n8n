@@ -1,4 +1,4 @@
-# FINAL Vetting Input Verification - Uses Real Dimensions from Your Data
+# FINAL Vetting Input Verification - Uses Real Dimensions from all_data.json
 import json
 
 def convert_jsproxy(obj):
@@ -21,7 +21,7 @@ def convert_jsproxy(obj):
 # Get insight data
 insight = convert_jsproxy(items[0].json)
 
-# REAL dimensions from your actual all_data.json (extracted from your debug outputs and All_in_One_FIXED.py)
+# REAL dimensions from actual all_data.json (extracted from  debug outputs and All_in_One_FIXED.py)
 real_dimensions = [
     'Abstract Conceptualization', 'Acceptance', 'Active Experimentation', 
     'Analysis', 'Analyticity', 'Anger Management', 'Approach-Avoidance Style',
@@ -47,17 +47,15 @@ real_dimensions = [
 dimension = insight.get('dimension', 'Unknown')
 is_real = dimension in real_dimensions
 
-# ALL the dimensions you mentioned are NOT in the real list:
-# "Social_Connectedness", "Self_Esteem", "Emotional_Regulation", "Academic_Motivation", "Conflict_Resolution_Skills"
-# Note: "Emotional Regulation" (with space) IS real, but "Emotional_Regulation" (with underscore) is NOT
+
 
 # Determine status - if not in real dimensions, it's fabricated
 if is_real:
-    status = '✅ REAL DIMENSION'
+    status = ' REAL DIMENSION'
     confidence_prediction = 5
     recommendation = 'Ready for high-quality vetting - dimension exists in your assessment data'
 else:
-    status = '🚨 FABRICATED DIMENSION'  
+    status = ' FABRICATED DIMENSION'  
     confidence_prediction = 1
     recommendation = f'Will receive low confidence score - dimension "{dimension}" does not exist in your 75 real dimensions from all_data.json'
 
